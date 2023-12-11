@@ -11,7 +11,7 @@ import HomeCard from '../components/HomeCard.vue';
 
 
 
-            <HomeCard image="../../public/images/banner/valo2.png" />
+            <HomeCard image="../../public/images/banner/nuevo_logo.png" />
 
 
         </div>

@@ -49,17 +49,23 @@ const beforeRouteEnter = (to, from, next) => {
     <div>
         <div id="TopNav" class="
         w-[calc(100%)] 
-            h-[60px] 
+            h-[100px] 
             fixed 
             right-0 
             z-20 
             bg-[#101010] 
             bg-opacity-80 
-            flex 
+            flex
+            flex-col
             items-center 
             justify-between
+            relative  
     ">
-            <div class="flex items-center ml-6">
+
+
+
+
+            <div class="absolute left-0 top-8 ml-6 flex items-center">
 
 
                 <RouterLink to="/" class="cursor-pointer">
@@ -73,6 +79,8 @@ const beforeRouteEnter = (to, from, next) => {
 
 
             <div class="buscador_texto">
+
+
                 <div class="flex items-center">
                     <div class="ml-20 relative">
 
@@ -95,51 +103,55 @@ const beforeRouteEnter = (to, from, next) => {
             </div>
 
 
-
-            <button @click="cambiarSeccion('todo')" :class="openMenu ? 'bg-[#282828]' : 'bg-black'"
-                class="bg-black hover:bg-[#282828] rounded-full p-2 mr-8 mt-0.5 cursor-pointer">
-                <div class="flex items-center">
-                    <div class="text-white text-[14px] ml-1.5 font-semibold">#Todo</div>
-                </div>
-            </button>
+            <div class="valor_botones pl-20 pr-20 py-2 ">
 
 
 
-            <button @click="cambiarSeccion('basico')" :class="openMenu ? 'bg-[#282828]' : 'bg-black'"
-                class="bg-black hover:bg-[#282828] rounded-full p-2 mr-8 mt-0.5 cursor-pointer">
-                <div class="flex items-center">
-                    <div class="text-white text-[14px] ml-1.5 font-semibold">#basico</div>
-                </div>
-            </button>
 
-
-            <button @click="cambiarSeccion('tendencia')" :class="openMenu ? 'bg-[#282828]' : 'bg-black'"
-                class="bg-black hover:bg-[#282828] rounded-full p-2 mr-8 mt-0.5 cursor-pointer">
-                <div class="flex items-center">
-                    <div class="text-white text-[14px] ml-1.5 font-semibold">#tendencia</div>
-                </div>
-            </button>
+                <button @click="cambiarSeccion('todo')" :class="openMenu ? 'bg-[#282828]' : 'bg-black'"
+                    class="bg-black hover:bg-[#282828] rounded-full p-2 mr-8 mt-0.5 cursor-pointer">
+                    <div class="flex items-center">
+                        <div class="text-white text-[14px] ml-1.5 font-semibold">#Todo</div>
+                    </div>
+                </button>
 
 
 
-            <button @click="cambiarSeccion('animo')" :class="openMenu ? 'bg-[#282828]' : 'bg-black'"
-                class="bg-black hover:bg-[#282828] rounded-full p-2 mr-8 mt-0.5 cursor-pointer">
-                <div class="flex items-center">
-                    <div class="text-white text-[14px] ml-1.5 font-semibold">#Animo</div>
-                </div>
-            </button>
+                <button @click="cambiarSeccion('basico')" :class="openMenu ? 'bg-[#282828]' : 'bg-black'"
+                    class="bg-black hover:bg-[#282828] rounded-full p-2 mr-8 mt-0.5 cursor-pointer">
+                    <div class="flex items-center">
+                        <div class="text-white text-[14px] ml-1.5 font-semibold">#basico</div>
+                    </div>
+                </button>
+
+
+                <button @click="cambiarSeccion('tendencia')" :class="openMenu ? 'bg-[#282828]' : 'bg-black'"
+                    class="bg-black hover:bg-[#282828] rounded-full p-2 mr-8 mt-0.5 cursor-pointer">
+                    <div class="flex items-center">
+                        <div class="text-white text-[14px] ml-1.5 font-semibold">#tendencia</div>
+                    </div>
+                </button>
 
 
 
-            <button @click="cambiarSeccion('electronica')" :class="openMenu ? 'bg-[#282828]' : 'bg-black'"
-                class="bg-black hover:bg-[#282828] rounded-full p-2 mr-8 mt-0.5 cursor-pointer">
-                <div class="flex items-center">
-                    <div class="text-white text-[14px] ml-1.5 font-semibold">#electronica</div>
-                </div>
-            </button>
+                <button @click="cambiarSeccion('animo')" :class="openMenu ? 'bg-[#282828]' : 'bg-black'"
+                    class="bg-black hover:bg-[#282828] rounded-full p-2 mr-8 mt-0.5 cursor-pointer">
+                    <div class="flex items-center">
+                        <div class="text-white text-[14px] ml-1.5 font-semibold">#Animo</div>
+                    </div>
+                </button>
 
 
 
+                <button @click="cambiarSeccion('electronica')" :class="openMenu ? 'bg-[#282828]' : 'bg-black'"
+                    class="bg-black hover:bg-[#282828] rounded-full p-2 mr-8 mt-0.5 cursor-pointer">
+                    <div class="flex items-center">
+                        <div class="text-white text-[14px] ml-1.5 font-semibold">#electronica</div>
+                    </div>
+                </button>
+
+
+            </div>
 
 
 
