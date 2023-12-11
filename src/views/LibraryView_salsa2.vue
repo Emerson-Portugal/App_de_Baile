@@ -16,7 +16,7 @@
                         <img src="/public/images/just_dance/just_dance-removebg-preview.png" alt="baile">
                     </div>
                     <div class="iconos_estrella">
-                        <button>
+                        <button @click="irABailar">
                             <span>A BAILAR !!</span>
                         </button>
                     </div>
@@ -34,6 +34,10 @@
                     <v-card @click="reproducirVideo(index)" class="mx-auto my-4 pushable mix_tall" elevation=16
                         :style="{ zIndex: video.zIndex }">
                         <!-- Resto del código -->
+
+                        <v-card-subtitle class="contenedor_autor_clas">
+                            <span class="me-1 contenedor_autor">{{ video.autor }}</span>
+                        </v-card-subtitle>
 
 
                         <div class="video-container">
@@ -61,13 +65,7 @@
                                 </v-row>
                             </v-card-text>
 
-                            <v-card-item class="cotenedor_titulo_video">
-                                <v-card-title class="contenedor_cancion">{{ video.cancion }}</v-card-title>
-                                <br>
-                                <v-card-subtitle class="contenedor_autor_clas">
-                                    <span class="me-1 contenedor_autor">{{ video.autor }}</span>
-                                </v-card-subtitle>
-                            </v-card-item>
+
                         </div>
                     </v-card>
                 </v-col>
@@ -118,20 +116,20 @@ export default {
                 {
                     cancion: 'Paso de Baile',
                     autor: 'Lineal',
-                    tiempo: '02:00',
+                    tiempo: '01:00',
                     url: '/public/images/pasos_salsa_icono/Group_1.png',
                     inicio: '00:00',
-                    fin: '00:09'
+                    fin: '00:04'
 
 
                 },
                 {
                     cancion: 'Paso de Baile',
                     autor: 'Lateral',
-                    tiempo: '02:00',
+                    tiempo: '0:30',
                     url: '/public/images/pasos_salsa_icono/Group_2.png',
-                    inicio: '00:09',
-                    fin: '00:16'
+                    inicio: '00:04',
+                    fin: '00:08'
 
                 },
                 {
@@ -139,17 +137,17 @@ export default {
                     autor: 'Adelante',
                     tiempo: '02:00',
                     url: '/public/images/pasos_salsa_icono/Group_5.png',
-                    inicio: '00:16',
-                    fin: '00:25'
+                    inicio: '00:08',
+                    fin: '00:11'
 
                 },
                 {
                     cancion: 'Paso de Baile',
                     autor: 'Atras',
-                    tiempo: '02:00',
+                    tiempo: '01:00',
                     url: '/public/images/pasos_salsa_icono/Group_6.png',
-                    inicio: '00:25',
-                    fin: '00:35'
+                    inicio: '00:11',
+                    fin: '00:13'
 
                 },
 
@@ -193,6 +191,14 @@ export default {
         },
 
 
+
+        irABailar() {
+            // Redirige a la URL deseada al hacer clic en el botón
+            window.location.href = 'http://127.0.0.1:5501/index.html';
+
+        },
+
+
     },
 
 
@@ -213,7 +219,7 @@ export default {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    margin-top: 35px;
+    margin-top: 70px;
 }
 
 /* video presentacion */
@@ -375,18 +381,21 @@ export default {
 /* Estilos para el contenedor del video y el rectángulo negro */
 
 .contenedor_cancion {
-    font-size: 12px;
-    font-weight: bold;
+    font-size: 10px;
     text-transform: uppercase;
     color: #fff;
 }
 
 
+.contenedor_autor_clas {
+    margin-left: 130px;
+    margin-bottom: 20px;
+}
 
 .contenedor_autor {
-    font-size: 15px;
+    font-size: 17px;
     color: #f5d7d7;
-
+    font-weight: bold;
 }
 
 .tiempo-color {
@@ -412,7 +421,7 @@ button {
     justify-content: center;
     align-items: center;
     border-radius: 5px;
-    background: #183153;
+    background: #1d1d1d;
     font-family: "Montserrat", sans-serif;
     box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
     overflow: hidden;

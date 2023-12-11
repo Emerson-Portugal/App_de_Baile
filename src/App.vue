@@ -111,7 +111,7 @@ const beforeRouteEnter = (to, from, next) => {
                 <button @click="cambiarSeccion('todo')" :class="openMenu ? 'bg-[#282828]' : 'bg-black'"
                     class="bg-black hover:bg-[#282828] rounded-full p-2 mr-8 mt-0.5 cursor-pointer">
                     <div class="flex items-center">
-                        <div class="text-white text-[14px] ml-1.5 font-semibold">#Todo</div>
+                        <div class="text-white text-[14px] ml-1.5 mr-2 font-semibold">#Todo</div>
                     </div>
                 </button>
 
@@ -120,7 +120,7 @@ const beforeRouteEnter = (to, from, next) => {
                 <button @click="cambiarSeccion('basico')" :class="openMenu ? 'bg-[#282828]' : 'bg-black'"
                     class="bg-black hover:bg-[#282828] rounded-full p-2 mr-8 mt-0.5 cursor-pointer">
                     <div class="flex items-center">
-                        <div class="text-white text-[14px] ml-1.5 font-semibold">#basico</div>
+                        <div class="text-white text-[14px] ml-1.5 mr-2 font-semibold">#Basico</div>
                     </div>
                 </button>
 
@@ -128,7 +128,7 @@ const beforeRouteEnter = (to, from, next) => {
                 <button @click="cambiarSeccion('tendencia')" :class="openMenu ? 'bg-[#282828]' : 'bg-black'"
                     class="bg-black hover:bg-[#282828] rounded-full p-2 mr-8 mt-0.5 cursor-pointer">
                     <div class="flex items-center">
-                        <div class="text-white text-[14px] ml-1.5 font-semibold">#tendencia</div>
+                        <div class="text-white text-[14px] ml-1.5 mr-2 font-semibold">#Tendencia</div>
                     </div>
                 </button>
 
@@ -137,7 +137,7 @@ const beforeRouteEnter = (to, from, next) => {
                 <button @click="cambiarSeccion('animo')" :class="openMenu ? 'bg-[#282828]' : 'bg-black'"
                     class="bg-black hover:bg-[#282828] rounded-full p-2 mr-8 mt-0.5 cursor-pointer">
                     <div class="flex items-center">
-                        <div class="text-white text-[14px] ml-1.5 font-semibold">#Animo</div>
+                        <div class="text-white text-[14px] ml-1.5 mr-2 font-semibold">#Animo</div>
                     </div>
                 </button>
 
@@ -146,7 +146,7 @@ const beforeRouteEnter = (to, from, next) => {
                 <button @click="cambiarSeccion('electronica')" :class="openMenu ? 'bg-[#282828]' : 'bg-black'"
                     class="bg-black hover:bg-[#282828] rounded-full p-2 mr-8 mt-0.5 cursor-pointer">
                     <div class="flex items-center">
-                        <div class="text-white text-[14px] ml-1.5 font-semibold">#electronica</div>
+                        <div class="text-white text-[14px] ml-1.5 mr-2 font-semibold">#Electronica Pop</div>
                     </div>
                 </button>
 
@@ -179,7 +179,7 @@ const beforeRouteEnter = (to, from, next) => {
 
             <div v-if="seccionActual === 'basico' || seccionActual === 'todo' || seccionActual === ''" class="mx-8 my-2">
                 <div class="margin_texto">
-                    <div type="button" class="text-white text-2xl font-semibold hover:underline margin_info">
+                    <div type="button" class="text-black text-2xl font-bold hover:underline margin_info">
                         DA TUS PRIMEROS PASOS !!!
                     </div>
                 </div>
@@ -214,7 +214,7 @@ const beforeRouteEnter = (to, from, next) => {
 
             <div v-if="seccionActual === 'tendencia' || seccionActual === 'todo' || seccionActual === ''" class="mx-8 my-2">
                 <div class="margin_texto">
-                    <div type="button" class="text-white text-2xl font-semibold hover:underline margin_info">
+                    <div type="button" class="ttext-black text-2xl font-bold hover:underline margin_info">
                         TENDENCIAS
                     </div>
                 </div>
@@ -250,7 +250,7 @@ const beforeRouteEnter = (to, from, next) => {
             <div v-if="seccionActual === 'animo' || seccionActual === 'todo' || seccionActual === ''" class="mx-8 my-2">
 
                 <div class="margin_texto">
-                    <div type="button" class="text-white text-2xl font-semibold hover:underline margin_info">
+                    <div type="button" class="text-black text-2xl font-bold hover:underline margin_info">
                         ESTADOS DE ANIMO
                     </div>
                 </div>
@@ -286,7 +286,7 @@ const beforeRouteEnter = (to, from, next) => {
                 class="mx-8 my-2">
 
                 <div class="margin_texto">
-                    <div type="button" class="text-white text-2xl font-semibold hover:underline margin_info">
+                    <div type="button" class="text-black text-2xl font-bold hover:underline margin_info">
                         LOS PASOS DEL MOMENTOS
                     </div>
                 </div>
@@ -436,10 +436,10 @@ export default {
             videoFull_1: [
                 {
                     type: 'video',
-                    videoUrl: "/public/videos/basico_salsa.mp4",
+                    videoUrl: "/public/videos/videos_salsa/vide1.mp4",
                     imageUrl: "../../public/images/icons/salsa/1.png",
                     steps: "Lineal - Lateral - Adelante",
-                    musica: '../public/music/Salsa/1.mp3',
+                    musica: '../public/music/Salsa/0.mp3',
                     mostrarVideo: false,
                     ruta: '/library_salsa2'
                 },
@@ -455,16 +455,16 @@ export default {
                 // Agrega más elementos de video según sea necesario
                 {
                     type: 'video',
-                    videoUrl: "/public/videos/video_bachata/video2.mp4",
+                    videoUrl: "/public/videos/video_bachata/video.mp4",
                     imageUrl: "../../public/images/icons/bachata/1.png",
                     steps: "Lineal - Lateral - Adelante",
-                    musica: '../public/music/Bachata/1.mp3',
+                    musica: '../public/music/Bachata/5.mp3',
                     mostrarVideo: false,
                     ruta: '/library_salsa2'
                 },
                 {
                     type: 'video',
-                    videoUrl: "/public/videos/video_bachata/video3.mp4",
+                    videoUrl: "/public/videos/video_bachata/video2.mp4",
                     imageUrl: "../../public/images/icons/bachata/2.png",
                     steps: "Lineal - Lateral - Adelante",
                     musica: '../public/music/Bachata/2.mp3',
@@ -473,7 +473,7 @@ export default {
                 },
                 {
                     type: 'video',
-                    videoUrl: "/public/videos/videos_salsa/video1.mp4",
+                    videoUrl: "/public/videos/videos_salsa/video2.mp4",
                     imageUrl: "../../public/images/icons/salsa/2.png",
                     steps: "Lineal - Lateral - Adelante",
                     musica: '../public/music/Salsa/2.mp3',
@@ -487,7 +487,7 @@ export default {
             videoFull_2: [
                 {
                     type: 'video',
-                    videoUrl: "/public/videos/videos_salsa/video2.mp4",
+                    videoUrl: "/public/videos/videos_salsa/video3.mp4",
                     imageUrl: "../../public/images/icons/salsa/3.png",
                     steps: "Lineal - Lateral - Adelante",
                     musica: '../public/music/Salsa/3.mp3',
@@ -506,7 +506,7 @@ export default {
 
                 {
                     type: 'video',
-                    videoUrl: "/public/videos/video_bachata/video4.mp4",
+                    videoUrl: "/public/videos/video_bachata/video3.mp4",
                     imageUrl: "../../public/images/icons/bachata/3.png",
                     steps: "Lineal - Lateral - Adelante",
                     musica: '../public/music/Bachata/3.mp3',
@@ -524,7 +524,7 @@ export default {
                 },
                 {
                     type: 'video',
-                    videoUrl: "/public/videos/basico_salsa.mp4",
+                    videoUrl: "/public/videos/videos_salsa/video4.mp4",
                     imageUrl: "../../public/images/icons/salsa/4.png",
                     steps: "Lineal - Lateral - Adelante",
                     musica: '../public/music/Salsa/1.mp3',

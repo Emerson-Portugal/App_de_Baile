@@ -5,7 +5,7 @@ import HomeCard from '../components/HomeCard.vue';
 </script>
 
 <template>
-    <div class="p-1">
+     <div class="p-1" style="margin-top: 100px;">
 
         <div class="items-center">
 
