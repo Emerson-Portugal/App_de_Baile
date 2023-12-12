@@ -1,10 +1,7 @@
 # Academia de BaileBaile 
 
-Con esta pagina web contruida en `Vue` por el lado del frontend, para mostara los pasos y luego parasia al lado del backend, donde atravez del reconocimento, te enseña a bailar reconociendo tus errores.
+Con esta página web desarrollada en Vue para el frontend, se presentan de manera visual los pasos de baile. Luego, la atención se traslada al backend, donde, mediante reconocimiento, te guía en el aprendizaje del baile al identificar y corregir tus errores.
 
-## Como Funciona
-
-Es una 
 
 ## Instalacion
 
@@ -21,4 +18,4 @@ npm run dev
 ## Pantalla Principal
 
 
-![imagen]("/public/images/pantalla_principal.png")
+![imagen](/public/images/pantalla_principal.png)
