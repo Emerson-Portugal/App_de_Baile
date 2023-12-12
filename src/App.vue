@@ -438,26 +438,27 @@ export default {
                     type: 'video',
                     videoUrl: "/public/videos/videos_salsa/vide1.mp4",
                     imageUrl: "../../public/images/icons/salsa/1.png",
-                    steps: "Lineal - Lateral - Adelante",
+                    steps: "Linea - Lateral - Atras Derecha - Atras Izquierda",
                     musica: '../public/music/Salsa/0.mp3',
                     mostrarVideo: false,
-                    ruta: '/library_salsa2'
+                    ruta: '/LibraryView_bachata'
                 },
                 {
                     type: 'video',
                     videoUrl: "/public/videos/videos_kpop/video1.mp4",
                     imageUrl: "../../public/images/icons/kpop/1.png",
-                    steps: "Lineal - Lateral - Adelante",
+                    steps: "Pies Adentro y Afuera - Pies Adentro y Afuera Veloz - Costados - Brasos para Atras",
                     musica: '../public/music/Kpop/1.mp3',
                     mostrarVideo: false,
-                    ruta: '/library_salsa2'
+                    ruta: '/LibraryView_kpop'
                 },
                 // Agrega más elementos de video según sea necesario
+
                 {
                     type: 'video',
                     videoUrl: "/public/videos/video_bachata/video.mp4",
                     imageUrl: "../../public/images/icons/bachata/1.png",
-                    steps: "Lineal - Lateral - Adelante",
+                    steps: "Lateral Derecha - Lateral Izquierda - Derecha Veloz - Izquierda Veloz",
                     musica: '../public/music/Bachata/5.mp3',
                     mostrarVideo: false,
                     ruta: '/library_salsa2'

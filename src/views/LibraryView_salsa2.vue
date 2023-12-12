@@ -91,10 +91,18 @@ export default {
 
 
     beforeRouteUpdate(to, from, next) {
-        this.scrollToTop();
-        next();
-    },
+    this.scrollToTop();
+    
+    // Actualiza el video solo si la URL del video ha cambiado
+    if (to.query.videoUrl !== from.query.videoUrl) {
+      this.videoUrl = to.query.videoUrl || '';
+    }
 
+    next();
+  },
+
+
+  
     mounted() {
         console.log('Componente montado');
         this.$nextTick(() => {
@@ -115,7 +123,7 @@ export default {
             videos: [
                 {
                     cancion: 'Paso de Baile',
-                    autor: 'Lineal',
+                    autor: 'Lateral Derecha',
                     tiempo: '01:00',
                     url: '/public/images/pasos_salsa_icono/Group_1.png',
                     inicio: '00:00',
@@ -125,7 +133,7 @@ export default {
                 },
                 {
                     cancion: 'Paso de Baile',
-                    autor: 'Lateral',
+                    autor: 'Lateral Izquierda',
                     tiempo: '0:30',
                     url: '/public/images/pasos_salsa_icono/Group_2.png',
                     inicio: '00:04',
@@ -134,7 +142,7 @@ export default {
                 },
                 {
                     cancion: 'Paso de Baile',
-                    autor: 'Adelante',
+                    autor: 'Derecha Veloz',
                     tiempo: '02:00',
                     url: '/public/images/pasos_salsa_icono/Group_5.png',
                     inicio: '00:08',
@@ -143,7 +151,7 @@ export default {
                 },
                 {
                     cancion: 'Paso de Baile',
-                    autor: 'Atras',
+                    autor: 'Izquierda Veloz',
                     tiempo: '01:00',
                     url: '/public/images/pasos_salsa_icono/Group_6.png',
                     inicio: '00:11',
@@ -388,7 +396,7 @@ export default {
 
 
 .contenedor_autor_clas {
-    margin-left: 130px;
+    margin-left: 90px;
     margin-bottom: 20px;
 }
 
